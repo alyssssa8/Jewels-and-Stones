@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int numJewelsInStones(string J, string S) {
+        map<char, int>myMap;
+        int ans = 0;
+        for (char i : S) {
+            myMap[i]++;
+        }
+        for (char i : J) {
+            ans += myMap[i];
+        }
+        return ans;
+    }
+};
